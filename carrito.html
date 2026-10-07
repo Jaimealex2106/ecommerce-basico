@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carrito de compra - TechStore</title>
+  <link rel="stylesheet" href="assets/css/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="registro.html">Registro</a></li>
+        <li><a href="quienes_somos.html">Quiénes somos</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="carrito.html">Carrito (<span id="cart-counter">0</span>)</a></li>
+        <li><a href="busqueda.html">Búsqueda</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2>Carrito de Compras</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Producto</th>
+          <th>Precio Unitario</th>
+          <th>Cantidad</th>
+          <th>Subtotal</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items">
+        <tr>
+          <td>Laptop Gamer FX507</td>
+          <td>$15,000</td>
+          <td><input type="number" class="qty-input" min="0" value="1" data-price="15000"></td>
+          <td class="subtotal">$15,000</td>
+        </tr>
+        <tr>
+          <td>Mouse Óptico USB</td>
+          <td>$350</td>
+          <td><input type="number" class="qty-input" min="0" value="2" data-price="350"></td>
+          <td class="subtotal">$700</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="total-container">
+        <h3>Total a pagar: <span id="cart-total">$15,700</span></h3>
+    <!-- Botón para reiniciar el contador -->
+        <button id="btn-vaciar-carrito" class="btn-clear">Vaciar carrito</button>
+    </div>
+  </main>
+
+  <script src="js/script.js" type="module"></script>
+</body>
+</html>
